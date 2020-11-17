@@ -1,0 +1,363 @@
+.footer-top{
+    padding:150px 0;
+   
+}
+
+footer{
+    background: #333;
+    width: 100%;
+  
+    position: fixed;
+    bottom: 0;
+    z-index: -10;
+    font-family: 'Cinzel', serif;
+}
+@media(max-width:850px){
+    footer{
+        position: relative;
+      
+    }
+}
+
+.segment-one p {
+    font-size: 2.2em;
+    text-align: center;
+}
+.segment-one h3 {
+    font-size: 3em;
+    text-align: center;
+}
+
+@media(max-width:1050px){
+    .segment-one p {
+        font-size: 1.5em;
+    }
+    .segment-one h3 {
+        font-size: 2.2em;
+    }
+}
+@media(max-width:770px){
+    .segment-one div h3{
+        font-size: 1.7em;
+    }
+}
+.footer-top p{
+    color: #999;
+    line-height: 25px;
+}
+.footer-top h2,
+.footer-top h3{
+    color: #fff;
+}
+.footer-top h3{
+
+    letter-spacing: 3px;
+    margin: 10px 0;
+   
+}
+.segment-two h2::before{
+    content: '|';
+    color: thistle;
+    padding-right: 10px;
+}
+
+.segment-two ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.segment-two ul li{
+
+    
+    line-height: 40px;
+    width: 100%;
+}
+
+.footer-bottom-text{
+    text-align: center;
+    background: #333;
+    line-height: 25px;
+    font-size: 1.2em;
+    margin: 0;
+
+}
+
+/*Redes Sociales*/
+.segment-three .socialUl{
+
+    margin: 0;
+    padding: 0;
+    display: flex;    
+}
+.segment-three .socialUl li{
+    list-style: none;
+    position: relative;
+    margin: 0 10px;
+}
+.segment-three .socialUl li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    transition: .5s;
+    opacity: 0;
+    filter: blur(2px);
+    transform: scale(0.8);
+}
+.segment-three .socialUl li:hover::before{
+    opacity: .5;
+    transform: scale(1);
+}
+.segment-three .socialUl li a{
+    width: 60px;
+    height: 60px;
+    display: block;
+    transition: .5s;
+    background: #ccc;
+}
+.segment-three .socialUl li:hover a{
+    transform: translateY(-10px);
+
+}
+
+.segment-three .socialUl li a span{
+ width: 100%;
+ height: 100%;
+}
+.segment-three .socialUl li a span::before{
+  
+    font-family: fontAwesome;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #262626;
+    transform-origin: top;
+    transition: transform .5s;
+
+}
+.segment-three .socialUl li:hover a span::before{
+    transform: rotateX(90deg) translateY(-50%);
+
+}
+
+.segment-three .socialUl li a span::after{
+ 
+    font-family: fontAwesome;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #fff;
+    transform-origin: bottom;
+    transition: transform .5s;
+    transform: rotateX(90deg) translateY(50%);
+
+}
+.segment-three .socialUl li:hover a span::after{
+    transform: rotateX(0deg) translateY(0);
+
+}
+.segment-three .socialUl li:nth-child(1) a span::before,
+.segment-three .socialUl li:nth-child(1) a span::after{
+    content: '\f09a';
+
+}
+.segment-three .socialUl li:nth-child(2) a span::before,
+.segment-three .socialUl li:nth-child(2) a span::after{
+    content: '\f232';
+
+}
+.segment-three .socialUl li:nth-child(3) a span::before,
+.segment-three .socialUl li:nth-child(3) a span::after{
+    content: '\f16d';
+
+}
+.segment-three .socialUl li:nth-child(1) a span::after{
+    background: #3b5999;
+}
+.segment-three .socialUl li:nth-child(2) a span::after{
+    background: #25D366;
+}
+
+.segment-three .socialUl li:nth-child(3) a span::after{
+    background: #e4405f;
+}
+
+
+/*Compartir en Redes Sociales*/
+.segment-three .share{
+    position: absolute;
+    top: 110%;
+    left: 19.5%;
+    transform: translate(-50%,-50%) ;
+    width: 60px;
+    height: 60px;
+}
+.segment-three .share ul{
+    position: relative; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.segment-three .share ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: .5s;
+    overflow: hidden;
+    transform: scale(0);
+    border-radius: 10px;
+}
+.segment-three .share ul.active li{
+    transform: scale(0.95);
+}
+.segment-three .share ul li .social{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: #262626;
+    transition: .5s;
+     
+}
+
+.segment-three .share ul.active li .social:hover{
+    color: #fff;
+    background: #2196f3;
+}
+.segment-three .share ul.active li:nth-child(1){
+    top: -100%;
+    left:-100%;
+    transition-delay: 0s;
+
+}
+.segment-three .share ul.active li:nth-child(2){
+    top: -100%;
+    left:0;
+    transition-delay: 0.2s;
+}
+.segment-three .share ul.active li:nth-child(3){
+    top: -100%;
+    left:100%;
+    transition-delay: 0.4s;
+}
+.segment-three .share ul.active li:nth-child(4){
+    top: 0;
+    left:100%;
+    transition-delay: 0.6s;
+}
+.segment-three .share ul.active li:nth-child(5){
+    top: 100%;
+    left:100%;
+    transition-delay: 0.8s;
+}.segment-three .share ul.active li:nth-child(6){
+    top: 100%;
+    left:0;
+    transition-delay: 1s;
+}
+.segment-three .share ul.active li:nth-child(7){
+    top: 100%;
+    left:-100%;
+    transition-delay: 1.2s;
+}
+.segment-three .share ul.active li:nth-child(8){
+    top: 0;
+    left:-100%;
+    transition-delay: 1.4s;
+}
+.segment-three .share .toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #262626;
+    transform: scale(0.95);
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+.segment-three .share .toggle:hover{
+    text-shadow: 0 0 5px white;
+}
+.toggle::before{
+    content: '\f1e0';
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 20px;
+    
+
+}
+
+.toggle.active::before{
+    content: '\f00d';
+    text-shadow: 0 0 5px white;
+}
+
+@media(max-width:1200px){
+    .segment-three .share{
+        top: 105%;
+        left: 40%;
+    }
+    .sectionIniciarSesion{
+        height: 120vh;
+    }
+}
+@media(max-width:950px){
+    .segment-three .share{
+        top: 115%;
+        
+    }
+}
+@media(max-width:760px){
+    .segment-three .share{
+        top: 115%;
+        left: 90%;
+    }
+}
+@media(max-width:560px){
+    footer{
+        height: 1200px;
+    }
+    .footer-bottom-text {
+        margin-top: 80px;
+    }
+    .segment-three .share{
+        top: 135%;
+        left: 37%;
+    }
+
+}

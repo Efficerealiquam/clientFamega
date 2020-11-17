@@ -1,0 +1,63 @@
+.containerOtros {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+
+}/*  */
+.containerOtros .section {
+  position: sticky;
+  top: 0;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerOtros .section:nth-child(1) {
+  background: url("https://www.senati.edu.pe/sites/default/files/2017/carrera/09/diseno-y-desarrollo-web-senati-1800-x-1190.jpg");
+  background-size: cover;
+  
+}
+.S1{
+    text-shadow: 0 0 5px #111;
+}
+.containerOtros .section:nth-child(2) {
+  background: url("https://res.cloudinary.com/dyav1psn9/image/upload/v1603655804/tio_juani_mpdvhn.png");
+  background-size: cover;
+}
+.containerOtros .section:nth-child(3) {
+  background: #111;
+  background-size: cover;
+}
+.S3{
+    overflow: hidden;
+}
+.h2 {
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    text-align: center;
+    text-shadow: 0 0 10px #8a8a8a;
+    font-family: 'Cinzel', serif;
+}
+.S3 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contCenter{
+    width: 90%;
+    color: #fff;
+}
+.pS{
+    font-size: 1.5em;
+    font-family: montserrat;
+    position: relative;
+    text-shadow: 0 0 10px #111;
+}

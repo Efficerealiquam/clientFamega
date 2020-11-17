@@ -1,0 +1,240 @@
+.open {
+  position: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 100;
+  height: 100vh;
+  margin-bottom: 520px;
+}
+.open .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: top;
+  animation: open 1s ease-in-out forwards;
+}
+.open .layer:nth-child(1) {
+  background: #000;
+  z-index: 2;
+}
+.open .layer:nth-child(2) {
+  background: #333;
+  animation-delay: 1s;
+  z-index: 1;
+}
+@keyframes open {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.sectionNosotros {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.bannerText {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 700px;
+}
+.bannerText h2,
+.bannerText h3 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  transform-origin: left;
+  text-transform: uppercase;
+  transform: scaleX(0);
+  animation: revealTextReverse 1s ease-in-out forwards;
+}
+.bannerText h2 {
+  font-size: 5em;
+  animation-delay: 2s;
+}
+.bannerText h3 {
+  font-size: 3em;
+  animation-delay: 3s;
+}
+.bannerText h2::before,
+.bannerText h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  transform-origin: right;
+  animation: revealText 1s ease-in-out forwards;
+  animation-delay: 3s;
+}
+.bannerText h3::before {
+  animation-delay: 4s;
+}
+
+@keyframes revealText {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes revealTextReverse {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bannerText p {
+  opacity: 0;
+  font-weight: 400;
+  font-size: 1.2em;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.bannerText a {
+  opacity: 0;
+  display: inline-block;
+  margin: 20px 0 0;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.2m;
+  letter-spacing: 1px;
+  animation: fadeInBottom 0.5s linear forwards;
+  animation-delay: 5.5s;
+}
+
+@keyframes fadeInBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.bulb {
+  opacity: 0;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 6s;
+}
+
+.element1 {
+  opacity: 0;
+  position: absolute;
+  bottom: 400px;
+  right: 37%;
+  width: 300px;
+  height: 300px;
+  border: 40px solid #000;
+  animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
+  animation-delay: 7s;
+}
+.element2 {
+  opacity: 0;
+  position: absolute;
+  left: -10px;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+  animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
+  animation-delay: 7s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(45deg);
+  }
+  0% {
+    transform: rotate(405deg);
+  }
+}
+
+@media (max-width: 1280px) {
+  .sectionNosotros {
+    height: auto !important;
+    display: initial;
+    padding: 100px 25px;
+    box-sizing: border-box;
+  }
+  .bannerText {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
+    transform: translateY(0);
+    max-width: 700px;
+    z-index: 1001;
+  }
+  .open {
+    height: 1130px;
+  }
+}
+@media (max-width: 900px) {
+  .bannerText h2 {
+    font-size: 2.5em;
+  }
+  .bannerText h3 {
+    font-size: 1.5em;
+    margin-top: none;
+  }
+  .element1,
+  .element2 {
+    display: none;
+  }
+  .bulb {
+    top: 70%;
+  }
+}
+@media (max-width: 850px) {
+  .open {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .open {
+    margin-bottom: 0;
+  }
+  .bulb {
+    top: 50%;
+    right: 0%;
+  }
+}

@@ -1,0 +1,56 @@
+.contG {
+  background: #fff;
+  height: 100vh;
+  position: relative;
+}
+.containerNF {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  border-radius:10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://res.cloudinary.com/dksedihrp/image/upload/v1602284129/p404_qnd82y.png'), #555;
+  box-shadow:0 15px 30px rgba(0,0,0,.5);
+}
+
+.containerNF .contentNF{
+    max-width: 1000px;
+    text-align: center;
+}
+.containerNF .contentNF .h2-404{
+    font-size: 23vw;
+    color: #fff;
+    line-height:1em;
+}
+.containerNF .contentNF .h4-404{
+   position: relative;
+   font-size:1.5em;
+   margin-bottom:20px;
+   color:#111;
+   background:#fff;
+   font-weight:300 ;
+   padding: 10px 20px;
+   display: inline-block;
+}
+
+.containerNF .contentNF .p-404{
+    color: #fff;
+    font-size: 1.2em;
+
+ 
+}
+.containerNF .contentNF .link-404{
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background:#fff;
+    color: #111;
+    text-decoration: none;
+    margin-top:25px;
+    border-radius:25px;
+    border-bottom: 4px solid rgb(68, 67, 67);
+}
