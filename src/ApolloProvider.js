@@ -7,7 +7,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import { setContext } from "apollo-link-context";
 
 const httpLink = createHttpLink({
-  uri: "http://api.famega.pe",
+  uri: "https://api.famega.pe",
 });
 
 const authLink = setContext(() => {
